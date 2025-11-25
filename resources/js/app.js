@@ -22,3 +22,13 @@ chatForm.addEventListener("submit", function (e) {
             }
         });
 });
+
+import PhotoSwipeLightbox from "photoswipe/lightbox";
+import "photoswipe/style.css";
+
+const lightbox = new PhotoSwipeLightbox({
+    gallery: "#chat-box",
+    children: "a[data-pswp]",
+    pswpModule: () => import("photoswipe"),
+});
+lightbox.init();
